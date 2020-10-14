@@ -184,7 +184,6 @@ $ gzip filename
 
 ### k. `head`
 Hiển thị n=10 (mặc định) dòng đầu tiên của một tệp tin. Nếu muốn thay đổi n, sử dụng `head -n <number> filename`.
-Outputs the first 10 lines of file  
 ```bash
 $ head filename
 $ head -n 1 filename
