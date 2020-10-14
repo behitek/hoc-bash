@@ -211,7 +211,7 @@ $ lpr filename
 ### n. `lprm`
 Xóa lệnh in đang có trong hàng đợi máy in.
 ```bash
-$ lprm jobnumber
+$ lprm job_number
 ```
 
 ### o. `ls`
@@ -255,23 +255,19 @@ Xóa một tệp tin. Sử dụng command này với thư mục bạn sẽ gặp
 `rm: directory: is a directory`
 Để xóa một thư mục, bạn cần truyền tham số `-r` để nó xóa thư mục đó và toàn bộ nội dung bên trong. Bạn có thể bổ sung tham số `-f` để yêu cầu xóa và bỏ qua xác nhận của hệ thống.
 ```bash
-rm filename
+$ rm filename
 ```
 
 ### s. `tail`
 Giống `head` command, nhưng là hiển thị nội dung ở cuối tệp tin. Sử dụng tham số `-n` nếu muốn thay đổi số lượng dòng hiển thị.
 ```bash
-tail filename
+$ tail filename
 ```
 
 ### t. `touch`
 Cập nhật thời gian truy cập và sửa đổi của tệp tin tới thời gian hiện tại. Nếu tệp tin đó không tồn tại, nó sẽ được tạo ra.
 ```bash
 touch filename
-```
-Ví dụ:
-```bash
-$ touch ltkk.md
 ```
 
 ## 1.2. Text Operations
@@ -354,7 +350,7 @@ Kết quả thực thi command trên là:
 Hello World
 ```
 
-*Hiển thị "Hello World" có ký tự xuống hàng*
+*Hiển thị "Hello World" có ký tự xuống hàng ("\n")*
 ```bash
 $ echo -ne "Hello\nWorld\n"
 ```
@@ -556,7 +552,7 @@ Trình chỉnh sửa phục vụ cho việc tạo bộ lọc (filter) và chuy�
 Hello This is a Test 1 2 3 4
 ``` 
 
-*replace all spaces with hyphens*
+*Thay thế khoảng trắng bằng gạch nối*
 ```bash
 $ sed 's/ /-/g' example.txt
 ```
@@ -566,7 +562,7 @@ Hello-This-is-a-Test-1-2-3-4
 
 *Thay thế các chữ số bằng ký tự "d"*
 ```bash
-sed 's/[0-9]/d/g' example.txt
+$ sed 's/[0-9]/d/g' example.txt
 ```
 ```bash
 Hello This is a Test d d d d
@@ -586,7 +582,7 @@ e
 d
 ```
 
-*sort example.txt*
+*Sắp xếp example.txt*
 ```bash
 $ sort example.txt
 ```
@@ -686,7 +682,7 @@ $ sort example.txt | uniq -c
 ### m. `wc`
 Cho chúng ta biết tệp tin có bao nhiêu dòng, bao nhiều từ và bao nhiêu ký tự trong đó.
 ```bash
-wc filename
+$ wc filename
 ```
 Ví dụ:
 ```bash
@@ -794,7 +790,7 @@ $ dig domain
 ### f. `du`
 Hiển thị mức sử dụng ổ đĩa của các tệp tin hoặc thư mục. Xem thêm thông tin về command tại [link này](http://www.linfo.org/du.html)
 ```bash
-du [option] [filename|directory]
+$ du [option] [filename|directory]
 ```
 Các option:
 - `-h` (Dễ đọc hơn) Hiển thị mức dùng ở đơn vị (KB), (MB) và (GB).
@@ -840,7 +836,6 @@ $ ping 8.8.8.8
 ```
 
 ### n. `ps`
-Lists your processes.  
 Liệt kê các tiến trình hiện có của bạn.
 ```bash
 $ ps -u yourusername
@@ -934,7 +929,7 @@ $ kill PID
 ### b. `killall`
 Bắt buộc dừng (kết thúc) tất cả các tiến trình theo tên tiến trình.
 ```bash
-$ killall processname
+$ killall process_name
 ```
 
 ### c. &
@@ -1074,7 +1069,7 @@ case expression in
 esac
 ```
 
-Ví dụ về các biểu thức:
+Ví dụ về các biểu thức điều kiện:
 
 ```bash
 statement1 && statement2  # Chỉ đúng khi cả 2 đúng
