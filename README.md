@@ -863,7 +863,7 @@ $ scp source_file user@host:directory/target_file
 $ scp user@host:directory/source_file target_file
 $ scp -r user@host:directory/source_folder target_folder
 ```
-Nếu cổng kết nối SSH không phải cổng 80 (mặc định), bạn cần sử dụng tới tham số `-P`.
+Nếu cổng kết nối SSH không phải cổng 22 (mặc định), bạn cần sử dụng tới tham số `-P`.
 ```bash
 $ scp -P port user@host:directory/source_file target_file
 ```
@@ -873,7 +873,7 @@ ssh (SSH client) là một chương trình cho phép bạn đăng nhập và th�
 ```bash
 $ ssh user@host
 ```
-Bạn có thể sử dụng `-p` để truyền vào cổng kết nối SSH, mặc định là cổng 80.  
+Bạn có thể sử dụng `-p` để truyền vào cổng kết nối SSH, mặc định là cổng 22.  
 ```bash
 $ ssh -p port user@host
 ```
